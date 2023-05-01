@@ -1,7 +1,7 @@
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import bcrypt from 'bcrypt';
-import { getUserByEmail } from './user';
+import { getUserByEmail, getUserById } from '@/libs/user';
 
 passport.use(
   new LocalStrategy(
