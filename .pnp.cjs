@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.42"],\
             ["autoprefixer", "virtual:27dfa60e6b661bd28cb675463f896cff3d6e51887829a56db03d14b62a0ee4bfa24697eba6f19a893fc755304e0a6bee54e2ca59350680ae85eec31a49d67ac9#npm:10.4.14"],\
             ["bcrypt", "npm:5.1.0"],\
+            ["dayjs", "npm:1.11.7"],\
             ["dev", "npm:0.1.3"],\
             ["eslint", "npm:8.39.0"],\
             ["eslint-config-next", "virtual:27dfa60e6b661bd28cb675463f896cff3d6e51887829a56db03d14b62a0ee4bfa24697eba6f19a893fc755304e0a6bee54e2ca59350680ae85eec31a49d67ac9#npm:13.3.1"],\
@@ -2933,6 +2934,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.42"],\
             ["autoprefixer", "virtual:27dfa60e6b661bd28cb675463f896cff3d6e51887829a56db03d14b62a0ee4bfa24697eba6f19a893fc755304e0a6bee54e2ca59350680ae85eec31a49d67ac9#npm:10.4.14"],\
             ["bcrypt", "npm:5.1.0"],\
+            ["dayjs", "npm:1.11.7"],\
             ["dev", "npm:0.1.3"],\
             ["eslint", "npm:8.39.0"],\
             ["eslint-config-next", "virtual:27dfa60e6b661bd28cb675463f896cff3d6e51887829a56db03d14b62a0ee4bfa24697eba6f19a893fc755304e0a6bee54e2ca59350680ae85eec31a49d67ac9#npm:13.3.1"],\
@@ -3497,6 +3499,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/damerau-levenshtein-npm-1.0.8-bda7311c69-d240b77575.zip/node_modules/damerau-levenshtein/",\
           "packageDependencies": [\
             ["damerau-levenshtein", "npm:1.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dayjs", [\
+        ["npm:1.11.7", {\
+          "packageLocation": "./.yarn/cache/dayjs-npm-1.11.7-d5cd5b2919-5003a7c1dd.zip/node_modules/dayjs/",\
+          "packageDependencies": [\
+            ["dayjs", "npm:1.11.7"]\
           ],\
           "linkType": "HARD"\
         }]\

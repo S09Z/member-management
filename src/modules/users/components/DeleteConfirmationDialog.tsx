@@ -1,7 +1,7 @@
 // components/DeleteConfirmationDialog.tsx
 import { useState } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@material-ui/core';
-import { User } from '../types';
+import { User } from '@/modules/users/types';
 
 type Props = {
   user: User;

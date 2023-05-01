@@ -16,7 +16,7 @@ passport.use(
           return done(null, false, { message: 'Invalid email or password' });
         }
 
-        const passwordMatches = await bcrypt.compare(password, user.passwordHash);
+        const passwordMatches = await bcrypt.compare(password, user.password);
         if (!passwordMatches) {
           return done(null, false, { message: 'Invalid email or password' });
         }
@@ -33,7 +33,7 @@ passport.serializeUser((user: any, done) => {
   done(null, user.id);
 });
 
-passport.deserializeUser(async (id: number, done) => {
+passport.deserializeUser(async (id: string, done) => {
   const user = await getUserById(id);
   if (!user) {
     return done(new Error('User not found'));

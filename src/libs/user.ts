@@ -1,17 +1,18 @@
 import prisma from '@/libs/prisma';
+import dayjs from 'dayjs'
 
-export async function getUserById(id: number) {
-  return await prisma.user.findUnique({
+export async function getUserById(id: string) {
+  return await prisma.users.findUnique({
     where: {
-      id: id,
+      Id: id,
     },
   });
 }
 
-export async function getUserByEmail(email: string) {
-  return await prisma.user.findUnique({
+export async function getUserByEmail(Id: string) {
+  return await prisma.users.findUnique({
     where: {
-      email: email,
+      Id: Id,
     },
   });
 }
@@ -19,32 +20,46 @@ export async function getUserByEmail(email: string) {
 export async function createUser(data: {
   email: string;
   passwordHash: string;
-  name?: string;
+  firstName: string;
+  lastName: string;
+  companyId: string;
+  session_userId: string
 }) {
-  return await prisma.user.create({
+  return await prisma.users.create({
     data: {
+      Id: `U${dayjs().format('YYYYMMDDHHmm')}`,
       email: data.email,
-      passwordHash: data.passwordHash,
-      name: data.name,
+      username: '',
+      password: data.passwordHash,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      sex: '',
+      dept: '',
+      job: '',
+      phone: '',
+      companyId: data.companyId,
+      created_by: data.session_userId,
+      updated_by: ''
     },
   });
 }
 
-export async function updateUser(id: number, data: { name?: string }) {
-  return await prisma.user.update({
+export async function updateUser(id: string, data: { firstName?: string, lastName?: string }) {
+  return await prisma.users.update({
     where: {
-      id: id,
+      Id: id,
     },
     data: {
-      name: data.name,
+      firstName: data.firstName,
+      lastName: data.lastName
     },
   });
 }
 
-export async function deleteUser(id: number) {
-  return await prisma.user.delete({
+export async function deleteUser(id: string) {
+  return await prisma.users.delete({
     where: {
-      id: id,
+      Id: id,
     },
   });
 }

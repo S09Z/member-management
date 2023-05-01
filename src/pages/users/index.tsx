@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button, TextField } from '@material-ui/core';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { getUserById, updateUser } from '../../../lib/user';
+import { getUserById, updateUser } from '@/libs/user';
 
 export default function EditUser() {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function EditUser() {
   };
 
   const fetchUser = async () => {
-    const user = await getUserById(Number(id));
+    const user = await getUserById(String(id));
     setName(user.name);
     setEmail(user.email);
   };

@@ -1,3 +1,30 @@
+model Users {
+  Id	        String  @id
+  username	  String  @unique
+  email	      String
+  password	  String
+  firstName	  String
+  lastName	  String
+  sex	        String
+  dept	      String
+  job	        String
+  phone	      String
+  size	      Float   @default(0)
+  size_count	Float   @default(0)
+  size_cont	  Float   @default(0)
+  level	      Int     @default(1)
+  status	    Int     @default(9)
+  companyId	  String
+  remember	  Int     @default(0)
+  created_by	String
+  updated_by	String
+  created_at	DateTime @default(now())
+  updated_at	DateTime @updatedAt
+  code	      String?   
+  image	      String?   
+  digit	      String?   
+  guide	      Int      @default(0)
+}
 
 
 datasource db {
